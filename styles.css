@@ -1,1 +1,53 @@
+.gallery {
+	position: relative;
+	width: 1000px;
+	padding: 0;
+	list-style: none;
+}
 
+.gallery li {
+	display: inline-block;
+}
+
+.gallery input[type=radio] {
+	display: none;
+}
+
+.thumbnail {
+	display: inline-block;
+	position: relative;
+	z-index: 10;
+	cursor: pointer;
+	-moz-transition: transform .6s;
+	-o-transition: transform .6s;
+	-ms-transition: transform .6s;
+	-webkit-transition: transform .6s;
+	transition: transform .6s;
+}
+
+.thumbnail:hover {
+	transform: scale(1.03);
+}
+
+.thumbnail img {
+	height: 100px;
+	padding: 5px;
+	background-color: black;
+}
+
+.gallery-img {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	-moz-transition: opacity .6s;
+	-o-transition: opacity .6s;
+	-ms-transition: opacity	.6s;
+	-webkit-transition: opacity	.6s;
+	transition: opacity	.6s;
+	opacity: 0;
+}
+
+.gallery input[type=radio]:checked + img.gallery-img {
+	opacity: 1;
+}
